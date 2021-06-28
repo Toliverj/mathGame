@@ -8,7 +8,9 @@ const io = require('socket.io')(http, {
 
 const {addUser, getUsersInRoom, removeUser} = require('./users')
 
-http.listen(4000, () => {
+const PORT = 4000 || process.env.PORT
+
+http.listen(PORT, () => {
     console.log('running on port 4000')
 })
 
